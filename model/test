@@ -1,0 +1,43 @@
+# origin_sample = entity_fea_matrix[entity_i,:].cuda()
+                # selected_index = random.randint(1, select_sample_num)
+                # posive_sample_1 = entity_fea_matrix[index[entity_i,selected_index].cpu(),:].cuda()
+                # #tmp_loss = entity_loss(F.normalize(origin_sample,p=2,dim=-1), F.normalize(posive_sample_1, p=2, dim=-1), torch.tensor([1]).cuda())
+                # tmp_loss = entity_loss(origin_sample, posive_sample_1, torch.tensor([1]).cuda())
+                # entity_contras_loss += tmp_loss
+                
+                # for i in range(select_sample_num):
+                #     selected_index = random.randint(0, select_sample_num)
+                #     negative_sample = entity_fea_matrix[index[entity_i, len(index)-1-selected_index].cpu(),:].cuda()
+                #     #tmp_loss = entity_loss(F.normalize(origin_sample,p=2,dim=-1), F.normalize(posive_sample_1, p=2, dim=-1), torch.tensor([-1]).cuda())
+                #     tmp_loss = entity_loss(negative_sample, origin_sample, torch.tensor([-1]).cuda())
+                #     entity_contras_loss += tmp_loss
+
+                # # positive and negative graph
+                # pos_select_node = entity_fea_matrix[index[entity_i, torch.randperm(graph_node_num)[0:select_sample_num]].cpu(),:].cuda()
+                # pos_sim_graph = F.cosine_similarity(pos_select_node.unsqueeze(1), pos_select_node.unsqueeze(0), dim=2)
+                # pos_global_add_pool = torch.sum(pos_sim_graph,dim=1)
+
+                # #for i in range(3):
+                # pos1_select_node = entity_fea_matrix[index[entity_i, torch.randperm(graph_node_num)[0:select_sample_num]].cpu(),:].cuda()
+                # pos1_sim_graph = F.cosine_similarity(pos1_select_node.unsqueeze(1), pos1_select_node.unsqueeze(0), dim=2)
+                # pos1_global_add_pool = torch.sum(pos1_sim_graph,dim=1)
+
+                # tmp_loss = entity_loss(pos_global_add_pool, pos1_global_add_pool, torch.tensor([1]).cuda())
+                # entity_graph_contras_loss += tmp_loss
+
+                # for i in range(select_sample_num):
+                #     neg_select_node = entity_fea_matrix[index[entity_i, len(index) - 1 - torch.randperm(graph_node_num)[0:select_sample_num]].cpu(),:].cuda()
+                #     neg_sim_graph = F.cosine_similarity(neg_select_node.unsqueeze(1), neg_select_node.unsqueeze(0), dim=2)
+                #     neg_global_add_pool = torch.sum(neg_sim_graph, dim=1)
+
+                #     tmp_loss = entity_loss(neg_global_add_pool, pos_global_add_pool, torch.tensor([-1]).cuda())
+                #     entity_graph_contras_loss += tmp_loss
+
+                # entity_num = entity_num + 1
+                
+                                # #for i in range(3):
+                # pos1_select_node = entity_fea_matrix[index[entity_i, torch.randperm(graph_node_num)[0:graph_node_num]].cpu(),:].cuda()
+                # pos1_sim_graph = F.cosine_similarity(pos1_select_node.unsqueeze(1), pos1_select_node.unsqueeze(0), dim=2)
+                # pos1_global_add_pool = torch.sum(pos1_sim_graph,dim=1)
+                # neg_pos_subgraph_loss = 0 
+                # for i in range(graph_num):
